@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/login_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_login_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_et_radius"
+        app:layout_constraintTop_toBottomOf="@+id/img_login_bg" />
+
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/avatar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_account"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_login_account"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_account" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="@+id/tv_login_account"
+        android:background="@null"
+        android:hint="@string/account_hint"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/img_avatar"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_account"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_account" />
+
+
+    <TextView
+        android:id="@+id/tv_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_et_radius"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_account" />
+
+
+    <ImageView
+        android:id="@+id/img_password"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/input_password_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_password"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_login_password"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_password" />
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="@+id/tv_login_password"
+        android:background="@null"
+        android:hint="@string/password_hint"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toRightOf="@+id/img_password"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_password"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_password" />
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/password_show"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_login_password"
+        app:layout_constraintRight_toRightOf="@+id/tv_login_password"
+        app:layout_constraintTop_toTopOf="@+id/tv_login_password"
+        android:layout_marginRight="10dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_blue_radius_30dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

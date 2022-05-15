@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".plan.activity.WorkShopTaskActivity">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="车间任务"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_plan_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="流程卡编号"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_search" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:hint="@string/home_search_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_plan_num"
+        app:layout_constraintRight_toLeftOf="@+id/img_search"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/scan_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_search" />
+
+
+    <TextView
+        android:id="@+id/tv_matter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="物料名称"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_matter_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_matter_search" />
+
+    <EditText
+        android:id="@+id/et_matter_search"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:hint="@string/home_search_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toLeftOf="@+id/img_search"
+        app:layout_constraintTop_toBottomOf="@+id/et_search" />
+
+    <ImageView
+        android:id="@+id/img_matter_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_matter_search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_matter_search" />
+
+    <TextView
+        android:id="@+id/tv_pending"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/bg_gray_radius_10dp"
+        android:gravity="center"
+        android:text="未完工\n(0)"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_completed"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_search" />
+
+    <TextView
+        android:id="@+id/tv_completed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_a4c99f_radius_5dp"
+        android:gravity="center"
+        android:text="已完工\n(0)"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@+id/tv_pending"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_pending" />
+
+    <com.example.logistics.smartrefreshlayout.SwipeRefreshLayout
+
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pending">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy_task"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="Translate" />
+
+    </com.example.logistics.smartrefreshlayout.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

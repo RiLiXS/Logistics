@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('/Users/mac/AndroidStudioProjects/Logistics/Logistics/app/keystore')
+            storePassword '123456'
+            keyAlias 'keystore'
+            keyPassword '123456'
+        }
+        release {
+            storeFile file('/Users/mac/AndroidStudioProjects/Logistics/Logistics/app/keystore')
+            storePassword '123456'
+            keyAlias 'keystore'
+            keyPassword '123456'
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // 引入multidex库
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["constraintlayout"]
+
+    implementation rootProject.ext.dependencies["appcompat"]
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation rootProject.ext.dependencies["gson"]
+
+    implementation rootProject.ext.dependencies["rxlifecycle"]
+
+    implementation rootProject.ext.dependencies["rxlifecycle-android"]
+
+    implementation rootProject.ext.dependencies["rxlifecycle-components"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["immersionbar"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["converter-scalars"]
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["okio"]
+    implementation rootProject.ext.dependencies["stetho"]
+    implementation rootProject.ext.dependencies["stetho-okhttp3"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["fastjson"]
+    implementation rootProject.ext.dependencies["EasyNavigation"]
+    implementation rootProject.ext.dependencies["autosize"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["PickerView"]
+    implementation rootProject.ext.dependencies["MPAndroidChart"]
+    implementation rootProject.ext.dependencies["LoadingDialog"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["glide-compiler"]
+    implementation rootProject.ext.dependencies["AppUpdate"]
+    implementation rootProject.ext.dependencies["zxing"]
+    implementation rootProject.ext.dependencies["Permission"]
+}

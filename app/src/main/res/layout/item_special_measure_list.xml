@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_home_frame"
+    android:layout_marginTop="10dp"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_test_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="项目：测量项"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/tv_test_project"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="膜强度"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+      />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="标准范围：0~100 （单位：N）"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_test_project"
+            app:layout_constraintLeft_toRightOf="@+id/tv_title"
+            app:layout_constraintRight_toRightOf="parent"
+             />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_43a6ea_radius_5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="3dp"
+            android:text="新增"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_item" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add" />
+
+        <TextView
+            android:id="@+id/title_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平均值"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_average"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="@+id/tv_average" />
+
+
+        <TextView
+            android:id="@+id/tv_average"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_white_black_10dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/title_average"
+            app:layout_constraintRight_toLeftOf="@+id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0.5dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

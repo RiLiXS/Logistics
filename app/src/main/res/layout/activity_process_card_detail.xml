@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:fitsSystemWindows="true"
+    tools:context=".machining.activity.ProcessCardDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="流程卡详情"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/title_process_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/process_card_id"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_process_card"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/title_process_card"
+        app:layout_constraintLeft_toRightOf="@+id/title_process_card"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_process_card" />
+
+
+    <TextView
+
+        android:id="@+id/title_number_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/number_task"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_process_card"
+        app:layout_constraintTop_toBottomOf="@+id/tv_process_card" />
+
+    <TextView
+
+        android:id="@+id/tv_number_task"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/title_number_task"
+        app:layout_constraintLeft_toRightOf="@+id/title_number_task"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_number_task" />
+
+    <TextView
+        android:id="@+id/title_matter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/matter_name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_number_task" />
+
+    <TextView
+        android:id="@+id/et_matter_name"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matter_name"
+        app:layout_constraintLeft_toRightOf="@+id/title_matter_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matter_name" />
+
+    <TextView
+        android:id="@+id/title_completion_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/completion_status"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_name" />
+
+    <TextView
+        android:id="@+id/tv_completion_status"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_completion_status"
+        app:layout_constraintLeft_toRightOf="@+id/title_completion_status"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_completion_status" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/process_rcy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_completion_status" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

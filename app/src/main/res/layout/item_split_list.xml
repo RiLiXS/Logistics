@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+  >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+        android:background="@drawable/bg_feed_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/title_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_card"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_add_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_add_card"
+        app:layout_constraintLeft_toRightOf="@+id/title_add_card"
+        app:layout_constraintRight_toLeftOf="@+id/img_add_card"
+        app:layout_constraintTop_toTopOf="@+id/title_add_card" />
+
+    <TextView
+        android:id="@+id/title_splitNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/splitNum"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_add_card"
+        app:layout_constraintTop_toBottomOf="@+id/et_add_card" />
+
+    <TextView
+        android:id="@+id/et_splitNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_splitNum"
+        app:layout_constraintLeft_toRightOf="@+id/title_splitNum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_splitNum" />
+
+
+    <ImageView
+        android:id="@+id/img_add_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/scan_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_add_card"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_add_card" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

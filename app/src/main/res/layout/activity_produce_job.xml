@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_f2f2f2"
+    android:fitsSystemWindows="true"
+    tools:context=".machining.activity.ProduceJobActivity">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="产出报工"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_job_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报工记录"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="5dp"
+        android:textColor="@color/color_0027f5"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_work_report"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/title_task_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/task_code"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_task_code"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:imeOptions="actionSearch"
+                app:layout_constraintBottom_toBottomOf="@+id/title_task_code"
+                app:layout_constraintLeft_toRightOf="@+id/title_task_code"
+                app:layout_constraintRight_toLeftOf="@+id/img_task_code"
+                app:layout_constraintTop_toTopOf="@+id/title_task_code" />
+
+            <ImageView
+                android:id="@+id/img_task_code"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/scan_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/title_task_code"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_task_code" />
+
+            <TextView
+                android:id="@+id/title_matter_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/matter_type"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_task_code" />
+
+            <EditText
+                android:id="@+id/et_matter_type"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/title_matter_type"
+                app:layout_constraintLeft_toRightOf="@+id/title_matter_type"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_matter_type" />
+
+            <TextView
+                android:id="@+id/title_matter_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/matter_name"
+                android:enabled="false"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_matter_type" />
+
+            <EditText
+                android:id="@+id/et_matter_name"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_matter_name"
+                app:layout_constraintLeft_toRightOf="@+id/title_matter_name"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_matter_name" />
+
+            <TextView
+                android:id="@+id/title_planNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="任务数(大)"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_matter_name" />
+
+            <EditText
+                android:id="@+id/et_planNum"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_planNum"
+                app:layout_constraintLeft_toRightOf="@+id/title_planNum"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_planNum" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <TextView
+                android:id="@+id/title_task_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="任务数(小)"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/title_planNum"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_planNum" />
+
+            <EditText
+                android:id="@+id/et_task_num"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_task_num"
+                app:layout_constraintLeft_toRightOf="@+id/title_task_num"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_task_num" />
+
+            <TextView
+                android:id="@+id/title_completion_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/completion_status"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_task_num" />
+
+            <EditText
+                android:id="@+id/et_completion_status"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_completion_status"
+                app:layout_constraintLeft_toRightOf="@+id/title_completion_status"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_completion_status" />
+
+
+            <TextView
+                android:id="@+id/title_trial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/trial"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/title_completion_status"
+                app:layout_constraintRight_toRightOf="@+id/title_task_num"
+                app:layout_constraintTop_toTopOf="@+id/et_completion_status" />
+
+            <EditText
+                android:id="@+id/et_trial"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_trial"
+                app:layout_constraintLeft_toRightOf="@+id/title_trial"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_trial" />
+
+            <TextView
+                android:id="@+id/title_procedure_working"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/procedure_working"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_trial" />
+
+            <Spinner
+                android:id="@+id/et_procedure_working"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_procedure_working"
+                app:layout_constraintLeft_toRightOf="@+id/title_procedure_working"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_procedure_working" />
+
+            <TextView
+                android:id="@+id/title_billing_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/billing_method"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_procedure_working" />
+
+            <Spinner
+                android:id="@+id/et_billing_method"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_billing_method"
+                app:layout_constraintLeft_toRightOf="@+id/title_billing_method"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_billing_method" />
+
+            <TextView
+                android:id="@+id/title_jockey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/jockey"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_billing_method" />
+
+            <Spinner
+                android:id="@+id/et_jockey"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_jockey"
+                app:layout_constraintLeft_toRightOf="@+id/title_jockey"
+                app:layout_constraintRight_toLeftOf="@+id/img_jockey"
+                app:layout_constraintTop_toTopOf="@+id/title_jockey" />
+
+            <ImageView
+                android:id="@+id/img_jockey"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/scan_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/et_jockey"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_jockey" />
+
+            <TextView
+                android:id="@+id/title_device"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/device"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_jockey" />
+
+            <Spinner
+                android:id="@+id/et_device"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_device"
+                app:layout_constraintLeft_toRightOf="@+id/title_device"
+                app:layout_constraintRight_toLeftOf="@+id/img_device"
+                app:layout_constraintTop_toTopOf="@+id/title_device" />
+
+            <ImageView
+                android:id="@+id/img_device"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:src="@drawable/scan_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/et_device"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_device" />
+
+            <TextView
+                android:id="@+id/title_working_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/working_hours"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_device" />
+
+            <EditText
+                android:id="@+id/et_working_hours"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:text="0"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_working_hours"
+                app:layout_constraintLeft_toRightOf="@+id/title_working_hours"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_working_hours" />
+
+            <TextView
+                android:id="@+id/title_small_pieces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="小片合格数"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_qualifiedNum"
+                app:layout_constraintBottom_toBottomOf="@+id/title_qualifiedNum"
+                />
+
+            <EditText
+                android:id="@+id/et_small_pieces"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/title_small_pieces"
+                app:layout_constraintLeft_toRightOf="@+id/title_small_pieces"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_small_pieces" />
+
+
+            <TextView
+                android:id="@+id/title_qualifiedNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/qualifiedNum"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_working_hours" />
+
+
+
+            <EditText
+                android:id="@+id/et_qualifiedNum"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/title_qualifiedNum"
+                app:layout_constraintLeft_toRightOf="@+id/title_qualifiedNum"
+                app:layout_constraintRight_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_qualifiedNum" />
+
+            <TextView
+                android:id="@+id/title_multiple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/multiple"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/title_working_hours"
+                app:layout_constraintRight_toRightOf="@+id/title_task_num"
+                app:layout_constraintTop_toTopOf="@+id/et_working_hours" />
+
+            <EditText
+                android:id="@+id/et_multiple"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:text="1"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="@+id/title_multiple"
+                app:layout_constraintLeft_toRightOf="@+id/title_multiple"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_multiple" />
+
+
+            <TextView
+                android:id="@+id/title_unqualifiedNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/unqualifiedNum"
+                android:textColor="@color/black"
+                app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+                app:layout_constraintTop_toBottomOf="@+id/et_qualifiedNum" />
+
+            <EditText
+                android:id="@+id/et_unqualifiedNum"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/title_unqualifiedNum"
+                app:layout_constraintLeft_toRightOf="@+id/title_unqualifiedNum"
+                app:layout_constraintRight_toLeftOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_unqualifiedNum" />
+
+            <TextView
+                android:id="@+id/title_small_pieces_unqualifiedNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="小片不合格数"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/title_unqualifiedNum"
+                app:layout_constraintBottom_toBottomOf="@+id/title_unqualifiedNum"
+                />
+
+            <EditText
+                android:id="@+id/et_small_pieces_unqualifiedNum"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_white_radius_10dp"
+                android:paddingLeft="10dp"
+                android:enabled="false"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/title_small_pieces_unqualifiedNum"
+                app:layout_constraintLeft_toRightOf="@+id/title_small_pieces_unqualifiedNum"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/title_small_pieces_unqualifiedNum" />
+
+
+
+            <TextView
+                android:id="@+id/tv_reason_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_blue_radius_5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/reason_report"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_unqualifiedNum" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_work_report"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_blue_radius_30dp"
+        android:gravity="center"
+        android:text="@string/work_report"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_completion_report" />
+
+    <TextView
+        android:id="@+id/tv_completion_report"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_blue_radius_30dp"
+        android:gravity="center"
+        android:text="@string/completion_report"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_work_report"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

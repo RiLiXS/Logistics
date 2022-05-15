@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".machining.activity.assist.OutAssistOrderActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="外协提交单"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_process_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="流程卡号"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_process_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_process_search" />
+
+    <EditText
+        android:id="@+id/et_process_search"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:hint="@string/home_search_hint"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_process_num"
+        app:layout_constraintRight_toLeftOf="@+id/img_process_search"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <ImageView
+        android:id="@+id/img_process_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/scan_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_process_search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_process_search" />
+
+    <TextView
+        android:id="@+id/tv_plan_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="自制件号"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_search" />
+
+    <TextView
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@+id/tv_plan_num"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_process_search" />
+
+
+    <TextView
+        android:id="@+id/tv_matter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="物料名称"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_matter_search"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_matter_search" />
+
+    <TextView
+        android:id="@+id/et_matter_search"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_search" />
+
+
+    <TextView
+        android:id="@+id/title_procedure_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="工序"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_search" />
+
+    <Spinner
+        android:id="@+id/et_procedure_now"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/bg_home_frame"
+        app:layout_constraintBottom_toBottomOf="@+id/title_procedure_now"
+        app:layout_constraintLeft_toLeftOf="@+id/et_matter_search"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toTopOf="@+id/title_procedure_now" />
+
+    <TextView
+        android:id="@+id/tv_plan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="计划数"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_plan_num"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_plan_num" />
+
+    <TextView
+        android:id="@+id/et_plan_num"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/et_procedure_now" />
+
+    <TextView
+        android:id="@+id/title_task_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="任务数(大)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_task_num"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_task_num" />
+
+    <TextView
+        android:id="@+id/tv_task_num"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/et_plan_num" />
+
+    <TextView
+        android:id="@+id/title_work_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="是否完工"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_work_report"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_work_report" />
+
+    <TextView
+        android:id="@+id/tv_work_report"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_num" />
+    <TextView
+        android:id="@+id/title_send_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="发货数(大)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_send_goods"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_send_goods" />
+
+    <TextView
+        android:id="@+id/tv_send_goods"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_search"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_work_report" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_out_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切割倍数"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_out_task"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/et_out_task" />
+
+    <TextView
+        android:id="@+id/et_out_task"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_out_task"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_procedure_now" />
+
+    <TextView
+        android:id="@+id/title_task_little"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="任务数(小)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_task_little"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/et_task_little" />
+
+    <TextView
+        android:id="@+id/et_task_little"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_out_task"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_out_task" />
+
+    <TextView
+        android:id="@+id/title_process_multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工序倍数"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_process_multiple"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/tv_process_multiple" />
+
+    <TextView
+        android:id="@+id/tv_process_multiple"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_out_task"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_num" />
+
+    <TextView
+        android:id="@+id/title_send_goods_little"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发货数(小)"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_send_goods_little"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/tv_send_goods_little" />
+
+    <TextView
+        android:id="@+id/tv_send_goods_little"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_out_task"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_process_multiple" />
+
+
+
+    <TextView
+        android:id="@+id/tv_out_supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="供应商"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_out_supplier"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_out_supplier" />
+
+    <Spinner
+        android:id="@+id/et_out_supplier"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        app:layout_constraintTop_toBottomOf="@+id/tv_send_goods"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_send_goods"
+        app:layout_constraintRight_toRightOf="@+id/guideline" />
+
+
+
+    <TextView
+        android:id="@+id/tv_out_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="外协交期"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/et_out_goods"
+        app:layout_constraintLeft_toRightOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/et_out_goods" />
+
+    <TextView
+        android:id="@+id/et_out_goods"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_send_goods_little"
+        app:layout_constraintLeft_toRightOf="@+id/tv_out_goods"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_blue_radius_30dp"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

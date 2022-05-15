@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/bg_feed_add">
+
+
+
+    <TextView
+        android:id="@+id/title_bar_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bar_code"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_code"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_bar_code"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:imeOptions="actionSearch"
+        app:layout_constraintBottom_toBottomOf="@+id/title_bar_code"
+        app:layout_constraintLeft_toRightOf="@+id/title_bar_code"
+        app:layout_constraintRight_toLeftOf="@+id/img_task_code"
+        app:layout_constraintTop_toTopOf="@+id/title_bar_code" />
+    <ImageView
+        android:id="@+id/img_task_code"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/scan_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/title_bar_code"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_bar_code" />
+    <TextView
+        android:id="@+id/title_matter_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/matter_code"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_bar_code" />
+
+    <EditText
+        android:id="@+id/et_matter_code"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matter_code"
+        app:layout_constraintLeft_toRightOf="@+id/title_matter_code"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matter_code" />
+
+    <TextView
+        android:id="@+id/title_matter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/matter_name"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_code" />
+
+    <EditText
+        android:id="@+id/et_matter_name"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matter_name"
+        app:layout_constraintLeft_toRightOf="@+id/title_matter_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matter_name" />
+    <TextView
+        android:id="@+id/title_matter_specs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="物料规格"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_name" />
+
+    <EditText
+        android:id="@+id/et_matter_specs"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matter_specs"
+        app:layout_constraintLeft_toRightOf="@+id/title_matter_specs"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matter_specs" />
+
+    <TextView
+        android:id="@+id/title_matter_supplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="供应商"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_specs"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_specs" />
+
+    <EditText
+        android:id="@+id/et_matter_supplier"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matter_supplier"
+        app:layout_constraintLeft_toRightOf="@+id/title_matter_supplier"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matter_supplier" />
+
+    <TextView
+        android:id="@+id/title_batchNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/batchNumber"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_matter_supplier" />
+
+    <EditText
+        android:id="@+id/et_batchNumber"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/title_batchNumber"
+        app:layout_constraintLeft_toRightOf="@+id/title_batchNumber"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_batchNumber" />
+
+    <TextView
+        android:id="@+id/title_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/unit"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_batchNumber" />
+
+    <EditText
+        android:id="@+id/et_unit"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/title_unit"
+        app:layout_constraintLeft_toRightOf="@+id/title_unit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_unit" />
+
+    <TextView
+        android:id="@+id/title_totalNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/totalNum"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_unit" />
+
+    <EditText
+        android:id="@+id/et_totalNum"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/title_totalNum"
+        app:layout_constraintLeft_toRightOf="@+id/title_totalNum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_totalNum" />
+
+    <TextView
+        android:id="@+id/title_matterNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/matterNum"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="@+id/title_matter_name"
+        app:layout_constraintTop_toBottomOf="@+id/et_totalNum" />
+
+    <EditText
+        android:id="@+id/et_matterNum"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_white_radius_10dp"
+        android:paddingLeft="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/title_matterNum"
+        app:layout_constraintLeft_toRightOf="@+id/title_matterNum"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_matterNum" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_43a6ea_radius_5dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="保存"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/et_matterNum" />
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_43a6ea_radius_5dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_matterNum" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

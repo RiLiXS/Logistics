@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.logistics">
+
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- 进行网络访问和网络状态监控相关的权限声明 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Logistics">
+        <activity
+            android:name=".machining.activity.job.ProduceJobHistoryActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".machining.activity.job.ProduceJobUpdateActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".machining.activity.assist.ArrivalDetailsActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.assist.EnterArrivalActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.assist.OutAssistOrderActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.assist.OutAssistActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".plan.activity.SelfPlanTaskActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".plan.activity.WorkShopTaskActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.defects.DefectProductDealActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.defects.DefectProductActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.turnover.TurnOverActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.special_test.SpecialInspectionListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.onsite_test.OnsiteInspectionListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.finall_test.FinalInspectionListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.first_test.FirstInspectionListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.finall_test.FinalInspectionActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.special_test.SpecialInspectionActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.onsite_test.OnsiteInspectionActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".home.activity.first_test.FirstInspectionActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".machining.activity.ProcessCardDetailActivity" />
+        <activity
+            android:name=".machining.activity.ReasonReportActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.SplitActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.MergeListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.MergeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.TransCodeMergeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.SplitListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".machining.activity.ProduceJobActivity" />
+        <activity
+            android:name=".machining.activity.ProduceListActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.FeedingAddActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".machining.activity.FeedingListActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".matter.activity.LineMatterActivity" />
+        <activity
+            android:name=".matter.activity.StockWorkActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".matter.activity.PickingWorkActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AppStartActivity"
+            android:theme="@style/AppStart">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" /> <!-- 禁止弹框 -->
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+    </application>
+
+</manifest>

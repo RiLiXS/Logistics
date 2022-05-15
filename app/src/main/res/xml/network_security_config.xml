@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+
+     <domain includeSubdomains="true">218.29.152.122:9529</domain>
+
+    </domain-config>
+
+
+</network-security-config>

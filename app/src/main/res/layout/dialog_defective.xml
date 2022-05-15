@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/bg_feed_add">
+
+
+
+    <TextView
+        android:id="@+id/title_bar_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不良项目"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_defective"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar_code"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_43a6ea_radius_5dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="保存"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/rcy_defective" />
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_43a6ea_radius_5dp"
+        android:gravity="center"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="5dp"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcy_defective" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

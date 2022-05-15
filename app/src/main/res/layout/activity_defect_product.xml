@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".machining.activity.turnover.TurnOverActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="不合格品处理"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_return"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_process_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="流程卡号"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <EditText
+        android:id="@+id/et_process_card"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_process_card"
+        app:layout_constraintLeft_toRightOf="@+id/tv_process_card"
+        app:layout_constraintRight_toLeftOf="@+id/img_process_card"
+        app:layout_constraintTop_toTopOf="@+id/tv_process_card" />
+
+    <ImageView
+        android:id="@+id/img_process_card"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/scan_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_process_card"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_process_card" />
+
+    <TextView
+        android:id="@+id/tv_self_parts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="自制件"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_process_card" />
+
+    <EditText
+        android:id="@+id/et_self_parts"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_self_parts"
+        app:layout_constraintLeft_toRightOf="@+id/tv_process_card"
+        app:layout_constraintRight_toLeftOf="@+id/img_process_card"
+        app:layout_constraintTop_toTopOf="@+id/tv_self_parts" />
+
+    <ImageView
+        android:id="@+id/img_self_parts"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="10dp"
+        android:src="@drawable/search_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/et_self_parts"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_self_parts" />
+
+    <TextView
+        android:id="@+id/title_turnover_workshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="生产车间"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_self_parts" />
+
+    <Spinner
+        android:id="@+id/spinner_turnover_workshop"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_turnover_workshop"
+        app:layout_constraintLeft_toRightOf="@+id/title_turnover_workshop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_turnover_workshop" />
+
+    <TextView
+        android:id="@+id/title_out_workshop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="工序"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_turnover_workshop" />
+
+    <Spinner
+        android:id="@+id/spinner_out_workshop"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_out_workshop"
+        app:layout_constraintLeft_toLeftOf="@+id/spinner_turnover_workshop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_out_workshop" />
+
+    <TextView
+        android:id="@+id/title_defect_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="不合格原因"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_out_workshop" />
+
+    <Spinner
+        android:id="@+id/spinner_defect_reason"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_defect_reason"
+        app:layout_constraintLeft_toRightOf="@+id/title_defect_reason"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/title_defect_reason" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consLayout_task"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_home_frame"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_defect_reason">
+
+
+        <TextView
+            android:id="@+id/tv_pending"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_gray_radius_10dp"
+            android:gravity="center"
+            android:text="待处理\n(0)"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_completed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_completed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_a4c99f_radius_5dp"
+            android:gravity="center"
+            android:text="已处理\n(0)"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/tv_pending"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_pending" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pending">
+
+            <ImageView
+                android:id="@+id/rb_select_all"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/rb_unchekck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="全选"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/rb_select_all"
+                app:layout_constraintLeft_toRightOf="@+id/rb_select_all"
+                app:layout_constraintTop_toTopOf="@+id/rb_select_all" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <com.example.logistics.smartrefreshlayout.SwipeRefreshLayout
+
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_all">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_task"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="Translate" />
+
+        </com.example.logistics.smartrefreshlayout.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_blue_radius_30dp"
+        android:gravity="center"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
